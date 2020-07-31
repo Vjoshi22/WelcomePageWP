@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "welcome-page-wp-client-side-solution",
+    "id": "b01cdd60-811b-48ba-aecf-4e7041afd7d5",
+    "version": "1.6.1.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/welcome-page-wp.sppkg"
+  }
+}
