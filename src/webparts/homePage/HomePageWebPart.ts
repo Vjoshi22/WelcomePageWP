@@ -7,34 +7,19 @@ import {
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'WelcomePageWebPartStrings';
-import WelcomePage from './components/WelcomePage';
-import HomePage from "./components/HomePage";
-import { IWelcomePageProps } from './components/IWelcomePageProps';
+import * as strings from 'HomePageWebPartStrings';
+import HomePage from './components/HomePage';
+import { IHomePageProps } from './components/IHomePageProps';
 
-var renderContent: any;
-
-export interface IWelcomePageWebPartProps {
+export interface IHomePageWebPartProps {
   description: string;
 }
 
-// if((/welcome.aspx/.test(window.location.href.toLowerCase()) )){
-//   console.log(window.location.href.toLowerCase());
-//   renderContent = WelcomePage;
-// }else if((/home.aspx/.test(window.location.href.toLowerCase()) )){
-//   console.log(window.location.href.toLowerCase());
-//   renderContent = HomePage;
-// }else {
-//   console.log(window.location.href.toLowerCase());
-//   renderContent = HomePage;
-// }
-
-
-export default class WelcomePageWebPart extends BaseClientSideWebPart <IWelcomePageWebPartProps> {
+export default class HomePageWebPart extends BaseClientSideWebPart <IHomePageWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IWelcomePageProps> = React.createElement(
-      WelcomePage,
+    const element: React.ReactElement<IHomePageProps> = React.createElement(
+      HomePage,
       {
         description: this.properties.description
       }

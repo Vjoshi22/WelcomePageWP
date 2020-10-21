@@ -1,54 +1,54 @@
 import * as React from 'react';
-import styles from './WelcomePage.module.scss';
-import { IWelcomePageProps } from './IWelcomePageProps';
+import styles from './HomePage.module.scss';
+import { IHomePageProps } from './IHomePageProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import * as $ from "jquery";
 //external imports
 import { SPComponentLoader } from "@microsoft/sp-loader";
 import { SPHttpClient, ISPHttpClientOptions, SPHttpClientConfiguration, SPHttpClientResponse, HttpClientResponse } from "@microsoft/sp-http";
 
 let _image: string = require('../../Images/ManojNew16x9.png');
-export default class WelcomePage extends React.Component<IWelcomePageProps, {}> {
-  // public componentDidMount(){
-  //   $('div[name="Home"]').on('click', function(){
-  //     window.location.reload();
-  //   })
-  // }
-  public render(): React.ReactElement<IWelcomePageProps> {
+
+export default class HomePage extends React.Component<IHomePageProps, {}> {
+  public render(): React.ReactElement<IHomePageProps> {
     SPComponentLoader.loadCss("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
     return (
-      <div>
-        {/* <article className="row single-post mt-5 no-gutters"> */}
-        <div><h5>CEO's Message</h5></div>
-        <hr/>
-        <div>
-        <div style={{ float: "left",width:'21%',padding:'10px'}} className="mr-3" >
-          <img src={_image} alt="" style={{ float: "left", borderRadius:'3px',width:'100%' }} />
+      
+      <div style={{fontFamily:"calibri",fontSize:"15px"}}>
+          <div><h5>CEO's Message</h5></div>
+          <hr/>
+          <div>
+          <div style={{ float: "left",width:'21%',padding:'10px',}} className="mr-3" >
+          <img src={_image} alt="" style={{ float: "left", borderRadius:'3px',width:'100%'}} />
           {/* <span className="text-center">
             <h5>Manoj Baheti</h5>
             <h6>Founder & CEO</h6>
             <h6>Yash Technology</h6>
           </span> */}
         </div>
-        <div style={{ textAlign: "justify",padding:'10px' }}>
-          <p>
+        <div style={{ textAlign: "justify",padding:'10px'}}>
+          <p style={{marginBottom:'0px'}}>
             YASH is on an exponential revenue growth path last several years.  We have become extremely intentional in our customer acquisition, given the focus on building long-term sustainable relationships. We want to help our customers realize business value from their technology investments and enable them to transform themselves in the process.
+            </p><p>
+            We have been working to transform delivery globally and make it agile, focused on emerging best-practices, adopt global quality practices, drive profitability, and align it to deliver outstanding outcomes for our customers.
+          &nbsp;&nbsp;&nbsp;<a href="https://ytpl.sharepoint.com/sites/YASHPMO/SitePages/Welcome.aspx" target="_blank" data-interception="off">read more</a>
           </p>
-          <p>
+          {/* <p>
             We have been working to transform delivery globally and make it agile, focused on emerging best-practices, adopt global quality practices, drive profitability, and align it to deliver outstanding outcomes for our customers.
 </p>
-
+          <br />
           <p>
             Project and program management is a central theme in this delivery transformation. We are establishing a Global Project Management Office ( PMO), which will standardize best practices, guide projects to achieve success consistently, ensure strong governance, and develop a pervasive program management practice across the organization that drives delivery excellence.
+            
 </p>
-
+          
+          
           <p>
             While  Derek Dyer is leading the Global PMO, Shivpal Singh and his team will run the India based central PMO.  They will interact and collaborate with Service lines, Sales, and Delivery teams in managing/helping manage critical projects.
 </p>
-
+          <br />
           <p>
             Key focus areas of the Global PMO include
-<br />
+<br/>
             <ul>
               <li>Consolidating PM Best practices within ( and from outside of) the organization and strengthen PM PMI methodologies within YASH.</li>
               <li>Outlining a consistent and well-structured methodology that governs all projects, safeguarding against project failures.</li>
@@ -58,20 +58,19 @@ export default class WelcomePage extends React.Component<IWelcomePageProps, {}> 
               <li>Champion PM within YASH.</li>
 
             </ul></p>
-
+          <br />
           <p>Currently, many projects in YASH Americas and Europe of the SAP Serviceline are being governed-managed by the Global PMO. Starting August 2020, projects in these regions of the ILM and Digital service lines will come under the ambit of the PMO. Over time the idea is to bring the governance of all projects across regions under the stewardship of the Global PMO.
 
           </p>
           <p>
-            In the long term, we will also establish a PM academy as part of the Global PMO, which will train-enable-evaluate-certify project managers and keep them abreast of the latest and greatest in the world of Program management.
+          In the long term, we will also establish a PM academy as part of the Global PMO, which will train-enable-evaluate-certify project managers and keep them abreast of the latest and greatest in the world of Program management. 
           </p>
-          <br />
+          <br/>
           <p>
-            This is a strategic and business-critical initiative. I look forward to the leadership and other stakeholders working closely with the Global PMO in ensuring that every project that YASH delivers is exemplary and drives value for our clients.
-          </p>
-          </div>
+          This is a strategic and business-critical initiative. I look forward to the leadership and other stakeholders working closely with the Global PMO in ensuring that every project that YASH delivers is exemplary and drives value for our clients.
+          </p> */}
         </div>
-        {/* </article> */}
+        </div>
       </div>
     );
   }
